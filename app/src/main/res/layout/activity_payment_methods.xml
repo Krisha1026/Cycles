@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/app_background"
+    android:padding="16dp"
+    tools:context=".PaymentMethodsActivity">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Payment Methods"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Payment Methods List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/paymentMethodsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="8dp"/>
+
+    <!-- Add New Payment Method Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addPaymentMethodButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Add Payment Method"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="start"
+        app:iconTint="@color/white"
+        app:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white"/>
+
+    <!-- Empty State -->
+    <TextView
+        android:id="@+id/noPaymentMethodsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="No payment methods saved"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:layout_marginTop="32dp"/>
+</LinearLayout>
